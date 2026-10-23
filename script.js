@@ -50,10 +50,10 @@ function initTypingEffect() {
   if (!typingElement) return;
 
   const roles = [
-    'Full-Stack Developer',
-    'Open Source Contributor',
-    'Cloud & Web Enthusiast',
-    'Lifelong Learner'
+    'Exploring horizons across light and earth.',
+    'Framing faces with genuine human emotion.',
+    'Freezing time, one shutter click at a time.',
+    'Sculpting light with 15 years of RAW art.'
   ];
 
   let roleIndex = 0;

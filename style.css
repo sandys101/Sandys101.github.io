@@ -359,6 +359,15 @@ button {
   margin-bottom: 14px;
 }
 
+.hero-tagline {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  line-height: 1.45;
+  margin-bottom: 14px;
+  letter-spacing: -0.2px;
+}
+
 .hero-subtitle {
   font-size: 1.65rem;
   font-weight: 600;
