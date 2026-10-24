@@ -80,6 +80,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 15px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -88,7 +89,9 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100vw;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
   transition: background-color 0.25s ease, color 0.25s ease;
   position: relative;
 }
@@ -1419,24 +1422,29 @@ body {
 }
 
 /* ==========================================================================
-   RESPONSIVE MEDIA QUERIES
+   RESPONSIVE MEDIA QUERIES (Mobile-First Comprehensive Layout)
    ========================================================================== */
+
+/* 1. Tablets & Small Laptops (max-width: 960px) */
 @media screen and (max-width: 960px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 30px;
   }
 
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
   }
 
   .gear-condensed-card {
     grid-template-columns: 1fr;
+    gap: 22px;
   }
 
   .metrics-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .duality-row {
@@ -1448,31 +1456,46 @@ body {
     margin: 0 auto;
     transform: rotate(90deg);
   }
+
+  .dossier-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media screen and (max-width: 720px) {
+/* 2. Tablets, Phablets & Landscape Phones (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  :root {
+    --nav-height: 56px;
+  }
+
   .nav-menu {
-    display: none;
+    display: none !important;
   }
 
   .mobile-toggle {
-    display: flex;
+    display: flex !important;
   }
 
   .btn-icon-link .btn-label {
     display: none;
   }
 
+  .btn-icon-link {
+    padding: 6px 9px;
+  }
+
   .hero-heading {
-    font-size: 2.6rem;
+    font-size: clamp(2.3rem, 7vw, 3rem);
   }
 
   .stats-ribbon {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .gallery-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .spectrum-gauge {
@@ -1483,6 +1506,7 @@ body {
   .gauge-seg {
     border-right: none;
     border-bottom: 1px solid var(--border-color);
+    padding: 10px 14px;
   }
 
   .seg-prime-core {
@@ -1494,19 +1518,584 @@ body {
 
   .lens-trio {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .metrics-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .footer-row {
     flex-direction: column;
     text-align: center;
+    gap: 14px;
   }
 
-  .nav-arrow.prev { left: 6px; }
-  .nav-arrow.next { right: 6px; }
+  /* Article Specific at 768px */
+  .article-title {
+    font-size: clamp(1.6rem, 5.5vw, 2.2rem);
+  }
+
+  .dossier-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .ledger-comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .invoice-checklist-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .chat-msg {
+    max-width: 92%;
+  }
+
+  .evidence-exhibit-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .viral-share-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .share-buttons {
+    width: 100%;
+  }
+
+  .tldr-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .soundbite-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn-tweet-soundbite {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Lightbox Mobile Adjustments */
+  .lightbox-container {
+    width: 95%;
+    max-height: 94vh;
+  }
+
+  .lightbox-stage {
+    max-height: 55vh;
+  }
+
+  .lightbox-media-frame,
+  .lightbox-active-img {
+    max-height: 55vh;
+  }
+
+  .nav-arrow.prev { left: 8px; }
+  .nav-arrow.next { right: 8px; }
+
+  .toast-notification {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: none;
+  }
+}
+
+/* 3. Smartphones (max-width: 560px) */
+@media screen and (max-width: 560px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .brand-pill {
+    display: none;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .mobile-drawer {
+    padding: 14px 18px;
+  }
+
+  .mobile-link {
+    padding: 10px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 18px);
+    padding-bottom: 34px;
+  }
+
+  .hero-heading {
+    font-size: clamp(2rem, 8.5vw, 2.6rem);
+    letter-spacing: -0.8px;
+  }
+
+  .hero-motto {
+    font-size: 0.96rem;
+    line-height: 1.5;
+  }
+
+  .hero-card {
+    padding: 18px 16px;
+    margin-bottom: 16px;
+  }
+
+  .hero-bio {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .hero-bio-sub {
+    font-size: 0.85rem;
+  }
+
+  .hero-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .hero-alert-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 10px 12px;
+  }
+
+  .hero-alert-banner .alert-text {
+    white-space: normal;
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .hero-alert-banner .alert-arrow {
+    align-self: flex-end;
+    font-size: 0.78rem;
+  }
+
+  .section {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .section-compact {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .section-head {
+    margin-bottom: 26px;
+  }
+
+  .section-heading {
+    font-size: 1.65rem;
+    letter-spacing: -0.4px;
+  }
+
+  .section-subtext {
+    font-size: 0.88rem;
+  }
+
+  /* Homepage Article Card */
+  .article-preview-card {
+    padding: 18px 16px;
+  }
+
+  .preview-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .preview-title {
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+
+  .preview-excerpt {
+    font-size: 0.86rem;
+    line-height: 1.55;
+  }
+
+  .preview-footer-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .preview-read-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 14px;
+    background: var(--accent);
+    color: #000;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+  }
+
+  /* Gear & Spectrum */
+  .gear-condensed-card {
+    padding: 16px 14px;
+  }
+
+  .gear-title {
+    font-size: 1.3rem;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .spec-pill {
+    padding: 8px 10px;
+  }
+
+  .spectrum-box {
+    padding: 16px 14px;
+  }
+
+  /* Operations */
+  .metric-card {
+    padding: 16px 14px;
+  }
+
+  .metric-val {
+    font-size: 1.65rem;
+  }
+
+  .duality-card {
+    padding: 16px 14px;
+  }
+
+  .duality-list li {
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .quote-box {
+    padding: 16px 14px;
+  }
+
+  .quote-text {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  /* Article Page (`tata-service-center-hazard.html`) */
+  .article-main {
+    padding-top: calc(var(--nav-height) + 16px);
+    padding-bottom: 40px;
+  }
+
+  .breadcrumb {
+    font-size: 0.7rem;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .article-badge-row {
+    gap: 6px;
+  }
+
+  .badge-danger, .badge-neutral {
+    font-size: 0.66rem;
+    padding: 3px 8px;
+  }
+
+  .article-title {
+    font-size: clamp(1.4rem, 6.2vw, 1.85rem);
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .article-lead {
+    font-size: 0.96rem;
+    line-height: 1.6;
+    padding-left: 12px;
+    margin-bottom: 16px;
+  }
+
+  .article-byline-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 0;
+  }
+
+  .byline-tags {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* Thumb-Friendly 2x2 Grid for Social Sharing */
+  .viral-share-bar {
+    padding: 14px 12px;
+    margin-top: 14px;
+  }
+
+  .share-prompt {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .share-buttons,
+  .cta-buttons {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .share-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 6px;
+    min-height: 44px;
+    font-size: 0.76rem;
+  }
+
+  .share-btn.copy-btn,
+  .cta-buttons .copy-btn {
+    grid-column: 1 / -1;
+  }
+
+  /* TL;DR Card on Mobile */
+  .tldr-brief-card {
+    padding: 16px 12px;
+    margin-bottom: 24px;
+  }
+
+  .tldr-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .tldr-title {
+    font-size: 1.05rem;
+  }
+
+  .tldr-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .tldr-item {
+    padding: 12px 12px;
+  }
+
+  .tldr-item strong {
+    font-size: 0.88rem;
+  }
+
+  .tldr-item p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  /* Dossier Card on Mobile */
+  .incident-dossier-card {
+    padding: 16px 12px;
+    margin-bottom: 24px;
+  }
+
+  .dossier-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .dossier-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .d-label {
+    font-size: 0.68rem;
+  }
+
+  .d-val {
+    font-size: 0.84rem;
+  }
+
+  /* Prose & Chapter Headings */
+  .article-h2 {
+    font-size: 1.3rem;
+    margin: 28px 0 14px 0;
+    gap: 8px;
+  }
+
+  .h2-num {
+    font-size: 0.95rem;
+  }
+
+  .prose {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  /* Chat Transcripts on Mobile */
+  .chat-transcript-card {
+    padding: 12px 10px;
+    margin: 16px 0;
+  }
+
+  .chat-header {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.68rem;
+  }
+
+  .chat-msg {
+    max-width: 96%;
+    font-size: 0.84rem;
+    padding: 8px 10px;
+  }
+
+  /* Danger & Summary Callouts */
+  .danger-callout-box,
+  .math-summary-box,
+  .crm-bombardment-card,
+  .escalation-demands-card {
+    padding: 14px 12px;
+    margin: 16px 0;
+  }
+
+  .danger-callout-box p {
+    font-size: 0.95rem;
+  }
+
+  /* Soundbite Box */
+  .soundbite-card {
+    padding: 18px 14px;
+    margin: 24px 0;
+  }
+
+  .soundbite-quote-mark {
+    font-size: 2.5rem;
+    margin-bottom: -10px;
+  }
+
+  .soundbite-text {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .soundbite-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .btn-tweet-soundbite {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  /* Bottom CTA */
+  .article-share-cta {
+    padding: 22px 14px;
+    margin: 30px 0 24px 0;
+  }
+
+  .share-cta-title {
+    font-size: 1.25rem;
+  }
+
+  .share-cta-desc {
+    font-size: 0.86rem;
+    margin-bottom: 16px;
+  }
+
+  .article-footer-nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn-return-home {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  /* Lightbox Meta on Mobile */
+  .lightbox-meta {
+    padding: 10px 12px;
+  }
+
+  .meta-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .meta-title {
+    font-size: 1rem;
+  }
+
+  .meta-exif-pill {
+    font-size: 0.68rem;
+  }
+
+  .meta-desc {
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+}
+
+/* 4. Ultra-Compact Phones (max-width: 380px) */
+@media screen and (max-width: 380px) {
+  .brand-name {
+    font-size: 0.98rem;
+  }
+
+  .btn-theme-toggle,
+  .mobile-toggle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-heading {
+    font-size: 1.95rem;
+  }
+
+  .stats-ribbon {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .stat-val {
+    font-size: 1.15rem;
+  }
+
+  .stat-lbl {
+    font-size: 0.65rem;
+  }
+
+  .article-title {
+    font-size: 1.35rem;
+  }
 }
 
 
@@ -2327,35 +2916,6 @@ body {
   transform: translateX(4px);
 }
 
-@media screen and (max-width: 720px) {
-  .article-title {
-    font-size: 1.8rem;
-  }
-
-  .dossier-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .ledger-comparison-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .invoice-checklist-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .chat-msg {
-    max-width: 95%;
-  }
-
-  .evidence-exhibit-box {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-
 /* ==========================================================================
    HERO ALERT BANNER & NAV ALERT BADGE
    ========================================================================== */
@@ -2859,44 +3419,4 @@ body {
 .toast-message span {
   font-size: 0.74rem;
   color: var(--text-muted);
-}
-
-@media screen and (max-width: 720px) {
-  .viral-share-bar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .share-buttons {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .share-btn {
-    flex: 1;
-    justify-content: center;
-    padding: 8px 6px;
-    font-size: 0.72rem;
-  }
-
-  .tldr-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .soundbite-footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .btn-tweet-soundbite {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .toast-notification {
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
-    max-width: none;
-  }
 }

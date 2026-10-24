@@ -91,6 +91,12 @@ function initMobileDrawer() {
   const drawer = document.getElementById('mobile-drawer');
   if (!toggle || !drawer) return;
 
+  const closeDrawer = () => {
+    drawer.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+  };
+
   toggle.addEventListener('click', () => {
     const isOpen = drawer.classList.toggle('open');
     toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
@@ -98,11 +104,21 @@ function initMobileDrawer() {
   });
 
   drawer.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
-      drawer.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-      drawer.setAttribute('aria-hidden', 'true');
-    });
+    link.addEventListener('click', closeDrawer);
+  });
+
+  // Tap outside header/drawer to close on mobile
+  document.addEventListener('click', (e) => {
+    if (drawer.classList.contains('open') && !e.target.closest('#header')) {
+      closeDrawer();
+    }
+  });
+
+  // Escape key to close drawer
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      closeDrawer();
+    }
   });
 }
 
@@ -199,6 +215,40 @@ function initLightbox() {
     else if (e.key === 'ArrowRight') next();
     else if (e.key === 'ArrowLeft') prev();
   });
+
+  // Mobile Touch Swipe Gesture Support
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+
+  modal.addEventListener('touchstart', (e) => {
+    if (e.touches && e.touches[0]) {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  modal.addEventListener('touchend', (e) => {
+    if (e.changedTouches && e.changedTouches[0]) {
+      touchEndX = e.changedTouches[0].clientX;
+      touchEndY = e.changedTouches[0].clientY;
+      handleLightboxSwipe();
+    }
+  }, { passive: true });
+
+  function handleLightboxSwipe() {
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+    // Dominant horizontal swipe of at least 45px
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 45) {
+      if (deltaX < 0) {
+        next(); // Swiped left -> Next photo
+      } else {
+        prev(); // Swiped right -> Previous photo
+      }
+    }
+  }
 }
 
 /* ==========================================================================
