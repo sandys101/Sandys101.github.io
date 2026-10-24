@@ -8,6 +8,7 @@ Built with pure **HTML5**, **CSS3 (Modern Condensed Architecture)**, and vanilla
 
 ## ✨ Features
 
+- 📝 **Investigative Consumer Dispatches**: Dedicated long-form investigative reports (e.g. *Tata Service Center Petrol Leak Hazard Breakdown* at `tata-service-center-hazard.html`) with WhatsApp transcripts, financial audit tables, and evidence exhibits.
 - ⚡ **Modern Condensed Theme**: Ultra-clean high information density layout with tight spacing, sleek micro-borders, and high-impact visual typography.
 - 🖼️ **Curated Photography Gallery**: 6 genuine photographs by Sundeep (`photos/`) covering lake horizons, midnight monuments, 12th-century heritage, wildlife, temples, and mountain expedition camps.
 - 🔍 **Interactive Full-Screen Lightbox**: Click any photo plate to inspect with high-definition display, EXIF telemetry, and keyboard navigation (`Esc`, `←`, `→`).
