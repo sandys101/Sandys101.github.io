@@ -35,11 +35,7 @@ Your website will be live automatically at **`https://sandys101.in`** (or `https
 ## 🔍 SEO & Google Analytics Configuration
 
 ### 1. Google Analytics 4 (GA4) Setup
-The website is equipped with Google Analytics 4 (gtag.js) support and custom interaction tracking (theme toggles, lightbox image views, and outbound link clicks).
-
-To connect your GA4 account:
-1. Open [`index.html`](index.html) and [`tata-service-center-hazard.html`](tata-service-center-hazard.html).
-2. Search for `G-XXXXXXXXXX` and replace it with your real Google Analytics 4 Measurement ID (e.g., `G-1A2B3C4D5E`).
+The website is connected with Google Analytics 4 (gtag.js) Measurement ID **`G-7QKE18VCX2`** and custom interaction tracking (theme toggles, lightbox image views, and outbound link clicks).
 
 ### 2. Search Engine Indexing & Sitemaps
 - **Sitemap**: Generated at [`sitemap.xml`](sitemap.xml) with Google Image tags so all curated photographs appear in Google Images search.
