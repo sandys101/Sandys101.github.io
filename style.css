@@ -194,6 +194,35 @@ button {
 .nav-actions {
   display: flex;
   align-items: center;
+  gap: 12px;
+}
+
+.nav-source-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-source-btn:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-card-hover);
+  color: var(--accent-primary);
+  transform: translateY(-1px);
+}
+
+.nav-source-btn .github-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
 }
 
 .theme-toggle {
@@ -560,7 +589,7 @@ button {
 }
 
 /* ==========================================================================
-   Footer (Zero Hyperlinks)
+   Footer
    ========================================================================== */
 .footer {
   border-top: 1px solid var(--border-color);
@@ -573,7 +602,47 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  user-select: none;
+  gap: 20px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.footer-source-link:hover {
+  color: var(--accent-primary);
+}
+
+.footer-source-link .footer-github-icon {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+.footer-source-link .external-arrow {
+  font-size: 0.95rem;
+  transition: transform 0.2s ease;
+}
+
+.footer-source-link:hover .external-arrow {
+  transform: translate(2px, -2px);
+}
+
+.footer-right .copyright {
+  color: var(--text-muted);
 }
 
 /* ==========================================================================
@@ -607,7 +676,22 @@ button {
 
   .footer-container {
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     text-align: center;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-source-btn .source-text {
+    display: none;
+  }
+
+  .nav-source-btn {
+    padding: 8px 10px;
   }
 }

@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header / Navigation Bar (Zero Hyperlinks) -->
+  <!-- Header / Navigation Bar -->
   <header class="header" id="header">
     <div class="nav container">
       <div class="nav-logo">
@@ -27,6 +27,14 @@
       </div>
 
       <div class="nav-actions">
+        <!-- GitHub Source Link -->
+        <a href="https://github.com/sandys101/Sandys101.github.io" target="_blank" rel="noopener noreferrer" class="nav-source-btn" aria-label="View source repository on GitHub">
+          <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+          <span class="source-text">Source</span>
+        </a>
+
         <!-- Theme Switcher Button -->
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme">
           <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -231,14 +239,21 @@
     </section>
   </main>
 
-  <!-- Footer (Zero Hyperlinks) -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-container">
       <div class="footer-left">
         <p>SANDYS101.IN • Gurugram, India • A Personal Viewpoint • Living by My Own Design</p>
       </div>
       <div class="footer-right">
-        <p>&copy; 2026 SANDYS101.IN</p>
+        <a href="https://github.com/sandys101/Sandys101.github.io" target="_blank" rel="noopener noreferrer" class="footer-source-link" aria-label="View source repository on GitHub">
+          <svg class="footer-github-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+          <span>Source Code</span>
+          <span class="external-arrow">↗</span>
+        </a>
+        <p class="copyright">&copy; 2026 SANDYS101.IN</p>
       </div>
     </div>
   </footer>
