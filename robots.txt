@@ -1,0 +1,6 @@
+# robots.txt for https://sandys101.in
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://sandys101.in/sitemap.xml

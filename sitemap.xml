@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage & Portfolio -->
+  <url>
+    <loc>https://sandys101.in/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Image 1: Siliserh Lake -->
+    <image:image>
+      <image:loc>https://sandys101.in/photos/IMG_2630.jpg</image:loc>
+      <image:title>Siliserh Lake Palace and Water Pavilion, Alwar</image:title>
+      <image:caption>Tranquil water reflection of Alwar's historic lake palace platform with misty mountain ridgelines, captured by Sundeep Chauhan.</image:caption>
+    </image:image>
+
+    <!-- Image 2: India Gate -->
+    <image:image>
+      <image:loc>https://sandys101.in/photos/IMG_3929.jpg</image:loc>
+      <image:title>India Gate Midnight Glow, New Delhi</image:title>
+      <image:caption>Atmospheric long exposure of the illuminated India Gate monument against night skies by Sundeep Chauhan.</image:caption>
+    </image:image>
+
+    <!-- Image 3: Qutub Minar -->
+    <image:image>
+      <image:loc>https://sandys101.in/photos/IMG_3966.jpg</image:loc>
+      <image:title>Qutub Minar framed by Ancient Sandstone Arches</image:title>
+      <image:caption>72.5-meter fluted minaret framed through historic 12th-century ruined sandstone archways in Mehrauli, Delhi.</image:caption>
+    </image:image>
+
+    <!-- Image 4: Sambar Deer -->
+    <image:image>
+      <image:loc>https://sandys101.in/photos/IMG_2791.jpg</image:loc>
+      <image:title>Wild Sambar Deer with Antlers in Forest</image:title>
+      <image:caption>Majestic antlered stag resting peacefully in northern Indian wilderness, captured with telephoto prime compression.</image:caption>
+    </image:image>
+
+    <!-- Image 5: Chhatarpur Temple -->
+    <image:image>
+      <image:loc>https://sandys101.in/photos/IMG_3981.jpg</image:loc>
+      <image:title>Shree Adya Katyayani Temple Architecture, South Delhi</image:title>
+      <image:caption>Carved sandstone temple architecture with cascading spiral ramp staircases in afternoon sunlight.</image:caption>
+    </image:image>
+
+    <!-- Image 6: Aravalli Eco Camp -->
+    <image:image>
+      <image:loc>https://sandys101.in/photos/IMG_2616-01.jpeg</image:loc>
+      <image:title>Expedition Camp under Aravalli Mountain Ridges</image:title>
+      <image:caption>Traditional cane seating and canvas expedition tents beneath the rocky slopes of northern ridges.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investigative Article -->
+  <url>
+    <loc>https://sandys101.in/tata-service-center-hazard.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

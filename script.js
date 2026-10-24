@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavSpy();
   initMobileDrawer();
   initLightbox();
+  initAnalyticsTracking();
 });
 
 /* ==========================================================================
@@ -33,6 +34,14 @@ function initTheme() {
       const next = current === 'light' ? 'dark' : 'light';
       html.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
+
+      // Google Analytics Event Tracking
+      if (typeof gtag === 'function') {
+        gtag('event', 'select_content', {
+          content_type: 'theme',
+          item_id: next
+        });
+      }
     });
   }
 }
@@ -140,6 +149,16 @@ function initLightbox() {
     modal.classList.add('active');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+
+    // Google Analytics Event Tracking for Lightbox Inspections
+    if (typeof gtag === 'function') {
+      gtag('event', 'view_item', {
+        content_type: 'photograph',
+        item_id: item.title,
+        item_name: item.title,
+        item_category: item.exif
+      });
+    }
   }
 
   function close() {
@@ -178,5 +197,35 @@ function initLightbox() {
     if (e.key === 'Escape') close();
     else if (e.key === 'ArrowRight') next();
     else if (e.key === 'ArrowLeft') prev();
+  });
+}
+
+/* ==========================================================================
+   5. Google Analytics Outbound & Engagement Tracking
+   ========================================================================== */
+function initAnalyticsTracking() {
+  // Track clicks on external links (e.g. GitHub repo)
+  document.querySelectorAll('a[target="_blank"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click', {
+          event_category: 'outbound_link',
+          event_label: link.href,
+          transport_type: 'beacon'
+        });
+      }
+    });
+  });
+
+  // Track clicks into investigative reports
+  document.querySelectorAll('a[href*="tata-service-center-hazard"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'select_content', {
+          content_type: 'article',
+          item_id: 'tata-service-center-hazard'
+        });
+      }
+    });
   });
 }
