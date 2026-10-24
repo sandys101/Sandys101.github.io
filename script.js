@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileDrawer();
   initLightbox();
   initAnalyticsTracking();
+  initViralSharing();
 });
 
 /* ==========================================================================
@@ -226,6 +227,109 @@ function initAnalyticsTracking() {
           item_id: 'tata-service-center-hazard'
         });
       }
+    });
+  });
+}
+
+/* ==========================================================================
+   6. Viral Sharing Mechanics & Toast Notification
+   ========================================================================== */
+function initViralSharing() {
+  const toast = document.getElementById('toast');
+  let toastTimer = null;
+
+  const showToast = () => {
+    if (!toast) return;
+    toast.classList.add('show');
+    toast.setAttribute('aria-hidden', 'false');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('show');
+      toast.setAttribute('aria-hidden', 'true');
+    }, 3800);
+  };
+
+  const copyUrl = (btn, textElem) => {
+    const url = 'https://sandys101.in/tata-service-center-hazard.html';
+    
+    const triggerSuccess = () => {
+      showToast();
+      if (btn) btn.classList.add('copied');
+      if (textElem) textElem.textContent = 'Copied!';
+      setTimeout(() => {
+        if (btn) btn.classList.remove('copied');
+        if (textElem) textElem.textContent = 'Copy Link';
+      }, 2500);
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'share', {
+          method: 'copy_link',
+          content_type: 'article',
+          item_id: 'tata-service-center-hazard'
+        });
+      }
+    };
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(url).then(triggerSuccess).catch(() => {
+        fallbackCopy(url, triggerSuccess);
+      });
+    } else {
+      fallbackCopy(url, triggerSuccess);
+    }
+  };
+
+  const fallbackCopy = (text, callback) => {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-9999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+      document.execCommand('copy');
+      if (callback) callback();
+    } catch (err) {
+      console.error('Fallback copy failed', err);
+    }
+    document.body.removeChild(textArea);
+  };
+
+  // Top Copy Button
+  const btnTop = document.getElementById('btn-copy-link');
+  const txtTop = document.getElementById('copy-btn-text');
+  if (btnTop) {
+    btnTop.addEventListener('click', () => copyUrl(btnTop, txtTop));
+  }
+
+  // Bottom Copy Button
+  const btnBottom = document.getElementById('btn-copy-link-bottom');
+  const txtBottom = document.getElementById('copy-btn-text-bottom');
+  if (btnBottom) {
+    btnBottom.addEventListener('click', () => copyUrl(btnBottom, txtBottom));
+  }
+
+  // Track Social Shares
+  const platforms = [
+    { selector: '.share-btn.whatsapp', method: 'whatsapp' },
+    { selector: '.share-btn.x-twitter', method: 'twitter' },
+    { selector: '.share-btn.reddit', method: 'reddit' },
+    { selector: '.share-btn.linkedin', method: 'linkedin' },
+    { selector: '.btn-tweet-soundbite', method: 'twitter_soundbite' }
+  ];
+
+  platforms.forEach(({ selector, method }) => {
+    document.querySelectorAll(selector).forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (typeof gtag === 'function') {
+          gtag('event', 'share', {
+            method: method,
+            content_type: 'article',
+            item_id: 'tata-service-center-hazard'
+          });
+        }
+      });
     });
   });
 }

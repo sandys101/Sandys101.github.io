@@ -2408,3 +2408,495 @@ body {
   background: rgba(239, 68, 68, 0.15);
   color: #ef4444;
 }
+
+/* ==========================================================================
+   VIRAL SHARING & CONVERSION COMPONENTS
+   ========================================================================== */
+
+/* Top / Sticky Viral Share Bar */
+.viral-share-bar {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 18px;
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.share-prompt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.share-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+.share-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-main);
+}
+
+.share-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-sans);
+  background: var(--bg-surface);
+  color: var(--text-main);
+}
+
+.share-btn svg {
+  flex-shrink: 0;
+}
+
+/* Platform Colors with Dark/Light Support */
+.share-btn.whatsapp {
+  background: rgba(37, 211, 102, 0.12);
+  color: #25d366;
+  border-color: rgba(37, 211, 102, 0.35);
+}
+
+.share-btn.whatsapp:hover {
+  background: #25d366;
+  color: #000;
+  border-color: #25d366;
+  transform: translateY(-1px);
+}
+
+.share-btn.x-twitter {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
+.share-btn.x-twitter:hover {
+  background: var(--text-main);
+  color: var(--bg-base);
+  border-color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+.share-btn.reddit {
+  background: rgba(255, 69, 0, 0.12);
+  color: #ff4500;
+  border-color: rgba(255, 69, 0, 0.35);
+}
+
+.share-btn.reddit:hover {
+  background: #ff4500;
+  color: #fff;
+  border-color: #ff4500;
+  transform: translateY(-1px);
+}
+
+.share-btn.linkedin {
+  background: rgba(10, 102, 194, 0.12);
+  color: #0a66c2;
+  border-color: rgba(10, 102, 194, 0.35);
+}
+
+.share-btn.linkedin:hover {
+  background: #0a66c2;
+  color: #fff;
+  border-color: #0a66c2;
+  transform: translateY(-1px);
+}
+
+.share-btn.copy-btn {
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  border-color: var(--border-color);
+}
+
+.share-btn.copy-btn:hover {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.share-btn.copied {
+  background: var(--accent) !important;
+  color: #000 !important;
+  border-color: var(--accent) !important;
+}
+
+/* TL;DR Executive Brief Card */
+.tldr-brief-card {
+  background: linear-gradient(135deg, rgba(20, 26, 36, 0.8) 0%, rgba(14, 18, 26, 0.8) 100%);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid #ef4444;
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .tldr-brief-card {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.tldr-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.tldr-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tldr-pill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.tldr-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.tldr-verdict {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+.tldr-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.tldr-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tldr-item.highlight {
+  grid-column: 1 / -1;
+  background: rgba(245, 158, 11, 0.05);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.tldr-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+.tldr-badge.danger {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+}
+
+.tldr-badge.warning {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.tldr-badge.accent {
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.tldr-item strong {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.tldr-item p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Soundbite Quote Card */
+.soundbite-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(20, 26, 36, 0.9) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin: 32px 0;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .soundbite-card {
+  background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+  border-color: #fcd34d;
+}
+
+.soundbite-quote-mark {
+  font-family: serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.35;
+  margin-bottom: -16px;
+}
+
+.soundbite-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--text-main);
+  font-style: italic;
+  margin: 0 0 16px 0;
+}
+
+.soundbite-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 14px;
+  flex-wrap: wrap;
+}
+
+.soundbite-author {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.btn-tweet-soundbite {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--accent);
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn-tweet-soundbite:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+/* Bottom CTA Share Card */
+.article-share-cta {
+  background: linear-gradient(135deg, rgba(16, 22, 32, 0.95) 0%, rgba(9, 12, 16, 0.95) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  margin: 40px 0 32px 0;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+[data-theme="light"] .article-share-cta {
+  background: #ffffff;
+}
+
+.share-cta-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.share-cta-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.share-cta-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  max-width: 620px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  justify-content: center;
+}
+
+/* Floating Toast Notification */
+.toast-notification {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(9, 12, 16, 0.92);
+  border: 1px solid var(--accent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 18px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px var(--accent-glow);
+  transform: translateY(100px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  max-width: 380px;
+}
+
+[data-theme="light"] .toast-notification {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.toast-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.toast-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #000;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.toast-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.toast-message strong {
+  font-size: 0.86rem;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.toast-message span {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+@media screen and (max-width: 720px) {
+  .viral-share-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .share-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .share-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 8px 6px;
+    font-size: 0.72rem;
+  }
+
+  .tldr-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .soundbite-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-tweet-soundbite {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .toast-notification {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: none;
+  }
+}
