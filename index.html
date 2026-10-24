@@ -3,590 +3,410 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SANDYS101.IN — A Personal Viewpoint • Warm Analog Journal</title>
-  <meta name="description" content="SANDYS101.IN — A Personal Viewpoint • Living by My Own Design. Gurugram, India. Freezing time, exploring horizons, framing faces. One shutter click at a time.">
+  <title>SANDYS101.IN — A Personal Viewpoint • Sundeep</title>
+  <meta name="description" content="SANDYS101.IN — A Personal Viewpoint • Living by My Own Design. Gurugram, India. Freezing time, exploring horizons, framing faces. Real photography by Sundeep.">
   
   <!-- Favicon SVG -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎞️</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📷</text></svg>">
   
-  <!-- Google Fonts: Editorial Serif, Monospace, and Clean Sans -->
+  <!-- Modern Clean Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Main Stylesheet -->
+  <!-- Main Modern Condensed Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="journal-body">
+<body>
 
-  <!-- Subtle Filmic Vignette & Ambient Warmth -->
-  <div class="film-vignette" aria-hidden="true"></div>
-  <div class="analog-warmth-glow glow-top" aria-hidden="true"></div>
-  <div class="analog-warmth-glow glow-bottom" aria-hidden="true"></div>
+  <!-- Ambient Modern Background Glows -->
+  <div class="bg-glow glow-top" aria-hidden="true"></div>
+  <div class="bg-glow glow-subtle" aria-hidden="true"></div>
 
-  <!-- Header / Editorial Masthead Navigation -->
-  <header class="masthead-header" id="masthead">
-    <div class="nav-rule-top"></div>
-    <div class="container nav-container">
+  <!-- Modern Condensed Header / Navbar -->
+  <header class="header" id="header">
+    <div class="container nav-wrap">
       
-      <!-- Brand & Edition Tag -->
-      <a href="#intro" class="masthead-brand" aria-label="SANDYS101.IN Home">
-        <span class="brand-monogram">❖</span>
-        <div class="brand-text-group">
-          <span class="brand-title">SANDYS101<span class="accent-sepia">.IN</span></span>
-          <span class="brand-edition">GURUGRAM · EDITORIAL DISPATCH</span>
-        </div>
+      <!-- Brand Lockup -->
+      <a href="#hero" class="brand" aria-label="SANDYS101.IN Home">
+        <span class="brand-glyph">❖</span>
+        <span class="brand-name">SANDYS101<span class="brand-accent">.IN</span></span>
+        <span class="brand-pill">GURUGRAM</span>
       </a>
 
-      <!-- In-Page Section Jump Navigation -->
-      <nav class="masthead-nav" aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="#intro" class="nav-link active"><span class="nav-num">01</span> Manifesto</a></li>
-          <li><a href="#capture" class="nav-link"><span class="nav-num">02</span> Visual Pursuits</a></li>
-          <li><a href="#gear" class="nav-link"><span class="nav-num">03</span> Darkroom Kit</a></li>
-          <li><a href="#operations" class="nav-link"><span class="nav-num">04</span> Nocturnal Ops</a></li>
-        </ul>
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#hero" class="nav-item active">Manifesto</a>
+        <a href="#gallery" class="nav-item">Gallery <span class="nav-badge">6</span></a>
+        <a href="#gear" class="nav-item">Gear & Spectrum</a>
+        <a href="#operations" class="nav-item">Operations</a>
       </nav>
 
-      <!-- Masthead Action Controls -->
-      <div class="masthead-actions">
-        <!-- GitHub Source Link -->
-        <a href="https://github.com/sandys101/Sandys101.github.io" target="_blank" rel="noopener noreferrer" class="journal-btn btn-source" aria-label="View source repository on GitHub">
-          <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Action Controls -->
+      <div class="nav-actions">
+        <!-- Source Repo Button -->
+        <a href="https://github.com/sandys101/Sandys101.github.io" target="_blank" rel="noopener noreferrer" class="btn-icon-link" aria-label="GitHub Repository" title="View Source on GitHub">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
           </svg>
-          <span class="source-label">Source</span>
+          <span class="btn-label">Source</span>
         </a>
 
-        <!-- Analog Theme Toggle (Walnut Dark / Parchment Light) -->
-        <button class="journal-btn btn-theme" id="theme-toggle" aria-label="Switch between Warm Walnut and Parchment theme" title="Toggle Walnut / Parchment mode">
-          <span class="theme-icon sun-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-          </span>
-          <span class="theme-icon moon-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </span>
-          <span class="theme-mode-text" id="theme-label">Dark</span>
+        <!-- Modern Theme Toggle -->
+        <button class="btn-theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme" title="Switch Theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
+        <!-- Mobile Menu Button -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
         </button>
       </div>
 
     </div>
 
-    <!-- Mobile Drawer Navigation -->
-    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
-      <ul class="mobile-nav-list">
-        <li><a href="#intro" class="mobile-nav-link">01 · Personal Manifesto</a></li>
-        <li><a href="#capture" class="mobile-nav-link">02 · Visual Pursuits (Plates)</a></li>
-        <li><a href="#gear" class="mobile-nav-link">03 · Everyday Gear & Spectrum</a></li>
-        <li><a href="#operations" class="mobile-nav-link">04 · Nocturnal Command Ops</a></li>
-      </ul>
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <a href="#hero" class="mobile-link">Manifesto</a>
+      <a href="#gallery" class="mobile-link">Visual Gallery (6 Plates)</a>
+      <a href="#gear" class="mobile-link">Everyday Gear & Spectrum</a>
+      <a href="#operations" class="mobile-link">Nocturnal Operations</a>
     </div>
   </header>
 
-  <main class="journal-main">
+  <main>
 
     <!-- ==========================================================================
-         HERO SECTION: Editorial Cover Story & Journal Manifesto
+         HERO SECTION: Modern Condensed Split Cover
          ========================================================================== -->
-    <section class="journal-hero section" id="intro">
+    <section class="section hero-section" id="hero">
       <div class="container">
-
-        <!-- Journal Issue Header Strip -->
-        <div class="journal-issue-strip">
-          <div class="issue-left">
-            <span class="issue-tag">VOL. XVI — DISPATCHES FROM GURUGRAM</span>
-            <span class="issue-sep">✦</span>
-            <span class="issue-tag">NORTHERN INDIA</span>
-          </div>
-          <div class="issue-right">
-            <span class="issue-stamp">EST. 2011 · RAW DARKROOM ARCHIVE</span>
-          </div>
-        </div>
-
-        <!-- Cover Title & Hero Motto -->
-        <div class="hero-cover-masthead">
-          <h1 class="journal-main-title">
-            SANDYS101<span class="ink-accent">.IN</span>
-          </h1>
-          <p class="journal-tagline">
-            A Personal Viewpoint <span class="tagline-dot">•</span> Living by My Own Design
-          </p>
-          <p class="journal-motto">
-            “Freezing time, exploring horizons, framing faces. One shutter click at a time.”
-          </p>
-        </div>
-
-        <!-- Magazine Cover Spread: Manifesto + Technical Exif Telemetry -->
-        <div class="hero-editorial-spread">
+        
+        <div class="hero-grid">
           
-          <!-- Left Column: The Personal Statement Manifesto Card -->
-          <article class="editorial-manifesto-card">
-            <div class="card-filmic-stamp">
-              <span class="stamp-code">EXP // MANIFESTO</span>
-              <span class="stamp-date">ARCHIVAL PRINT</span>
-            </div>
+          <!-- Left: Identity & Manifesto -->
+          <div class="hero-content">
             
-            <div class="manifesto-body">
-              <p class="manifesto-lead">
-                <span class="editorial-dropcap">W</span>elcome to my personal space. This website is a personal canvas, not a commercial portfolio. It is an intimate digital darkroom dedicated to a single, uncompromising vision: how I see the world through my Sony Alpha mirrorless camera, backed by 15 years of RAW image experimentation.
-              </p>
-              <p class="manifesto-sub">
-                Here, I share my personal viewpoint in the form of articles, pictures, and videos—documenting unhurried stories from open roads, quiet late night hours, and everyday life.
-              </p>
+            <div class="status-pill">
+              <span class="live-pulse"></span>
+              <span>A Personal Viewpoint • Living by My Own Design</span>
             </div>
 
-            <div class="manifesto-signature-row">
-              <div class="author-block">
-                <span class="author-label">DISPATCH BY</span>
-                <span class="author-name">Sundeep · Sandys101</span>
-                <span class="author-location">Gurugram, Haryana, India</span>
-              </div>
-              <div class="camera-seal">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
-                  <circle cx="12" cy="13" r="3"></circle>
-                </svg>
-                <span>33mm PRIME</span>
+            <h1 class="hero-heading">
+              SANDYS101<span class="text-gradient">.IN</span>
+            </h1>
+
+            <p class="hero-motto">
+              “Freezing time, exploring horizons, framing faces. One shutter click at a time.”
+            </p>
+
+            <div class="hero-card">
+              <p class="hero-bio">
+                Welcome to my space. This website is a personal canvas, not a commercial portfolio. It’s a digital darkroom dedicated to a single vision: how I see the world through my Sony Alpha mirrorless camera, backed by 15 years of RAW image experimentation.
+              </p>
+              <p class="hero-bio-sub">
+                Here, I share my personal viewpoint in articles, pictures, and videos—documenting stories from open northern roads, quiet late hours, and everyday life.
+              </p>
+              <div class="hero-meta-row">
+                <span class="meta-tag"><strong>Sundeep Chauhan</strong> · Gurugram, India</span>
+                <span class="meta-tag mono">15+ Yrs RAW Darkroom</span>
               </div>
             </div>
-          </article>
 
-          <!-- Right Column: Tactile Field Telemetry & Core Disciplines -->
-          <aside class="editorial-stats-dossier" aria-label="Field Telemetry">
-            
-            <div class="dossier-header">
-              <span class="dossier-pill">FIELD LEDGER</span>
-              <span class="dossier-meta">15+ YRS IN THE CRAFT</span>
+            <!-- Condensed Metric Pills -->
+            <div class="stats-ribbon">
+              <div class="stat-item">
+                <span class="stat-val">15+</span>
+                <span class="stat-lbl">Years RAW</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">33<small>mm</small></span>
+                <span class="stat-lbl">Prime Glass</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">North</span>
+                <span class="stat-lbl">Expeditions</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">3 AM</span>
+                <span class="stat-lbl">Night Ops</span>
+              </div>
             </div>
 
-            <div class="dossier-grid">
+          </div>
+
+          <!-- Right: Hero Highlight Showcase Image -->
+          <div class="hero-visual-card" data-photo-id="1" data-title="Siliserh Lake Palace & Water Pavilion" data-src="photos/IMG_2630.jpg" data-exif="Siliserh Lake, Alwar · Telephoto Reflection · RAW" data-desc="Tranquil water reflection of Alwar's historic lake palace platform with distant misty mountain ridgelines at morning light.">
+            <div class="visual-wrapper">
+              <img src="photos/IMG_2630.jpg" alt="Siliserh Lake reflection and water platform by Sundeep Chauhan" class="hero-visual-img" loading="eager">
+              <div class="visual-gradient"></div>
               
-              <div class="dossier-tile">
-                <span class="dossier-num">15+</span>
-                <div class="dossier-detail">
-                  <strong>Years RAW Darkroom</strong>
-                  <span>Fine-art tone curve balancing & uncompressed RAW mastery</span>
+              <div class="visual-badge-top">
+                <span class="badge-dot"></span>
+                <span>FEATURED DISPATCH</span>
+              </div>
+
+              <div class="visual-caption">
+                <div class="caption-tag">Alwar, Rajasthan</div>
+                <h3 class="caption-title">Siliserh Lake Palace & Water Pavilion</h3>
+                <div class="caption-exif">
+                  <span>55–210mm Telephoto</span>
+                  <span>ƒ/8.0</span>
+                  <span>1/250s</span>
+                  <span>ISO 100</span>
                 </div>
               </div>
 
-              <div class="dossier-tile">
-                <span class="dossier-num">33<small>mm</small></span>
-                <div class="dossier-detail">
-                  <strong>Prime Storytelling</strong>
-                  <span>Natural 50mm human-eye equivalent with fast ƒ/1.4 low-light depth</span>
-                </div>
-              </div>
-
-              <div class="dossier-tile">
-                <span class="dossier-num">North</span>
-                <div class="dossier-detail">
-                  <strong>Trails & Horizons</strong>
-                  <span>Highways, alpine dawn passes & deep quiet horizons</span>
-                </div>
-              </div>
-
-              <div class="dossier-tile">
-                <span class="dossier-num">3 AM</span>
-                <div class="dossier-detail">
-                  <strong>Nocturnal Command</strong>
-                  <span>15+ years managing high-stakes international live operations</span>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Quick Story Jump Reel -->
-            <div class="dossier-footer">
-              <a href="#capture" class="dossier-action-link">
-                <span>Inspect Visual Gallery</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </a>
-              <span class="dossier-hint">Click any photo below to inspect in high-res lightbox</span>
-            </div>
-
-          </aside>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 02: Visual Pursuits (Exhibition Plates Gallery)
-         ========================================================================== -->
-    <section class="journal-section section-alt" id="capture">
-      <div class="container">
-        
-        <div class="section-editorial-header">
-          <div class="header-stamp">PLATE SERIES // 01 — 03</div>
-          <h2 class="section-editorial-title">What I Capture</h2>
-          <p class="section-editorial-subtitle">
-            Unscripted perspectives from bustling street corners, open northern highways, and tranquil starry dark-sky horizons.
-          </p>
-          <div class="header-ornament">
-            <span class="rule-line"></span>
-            <span class="rule-diamond">❖</span>
-            <span class="rule-line"></span>
-          </div>
-        </div>
-
-        <div class="plates-gallery-grid">
-          
-          <!-- Plate 01: Faces & Street Life -->
-          <article class="exhibition-plate-card" data-photo-id="1" data-title="Faces & Street Life" data-src="assets/images/street-life.jpg" data-exif="33mm Prime · ƒ/1.4 · 1/320s · ISO 100 · RAW" data-desc="Real, unposed moments, neighborhood bazaars, and natural play of ambient dust and warm golden hour backlighting. Captured with a fast 33mm prime lens matching natural human perception.">
-            
-            <!-- Analog Film Mount -->
-            <div class="plate-film-mount">
-              <div class="film-edge-top">
-                <span class="sprocket-code">▶ 101A</span>
-                <span class="film-stock-name">ILFORD RAW 100</span>
-                <span class="frame-index">PLATE #01</span>
-              </div>
-
-              <div class="plate-image-container">
-                <img src="assets/images/street-life.jpg" alt="Atmospheric street photography in warm golden hour light" class="plate-img" loading="lazy">
-                
-                <!-- Visual Hover Scrim & Inspect Badge -->
-                <div class="plate-inspect-scrim">
-                  <span class="inspect-pill">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                      <line x1="11" y1="8" x2="11" y2="14"></line>
-                      <line x1="8" y1="11" x2="14" y2="11"></line>
-                    </svg>
-                    Inspect Plate
-                  </span>
-                </div>
-              </div>
-
-              <div class="film-edge-bottom">
-                <span class="film-exif-stamp">33mm · ƒ/1.4 · 1/320s · ISO 100</span>
-                <span class="film-dot">●</span>
-                <span class="film-genre">Street & Portraits</span>
-              </div>
-            </div>
-
-            <!-- Card Editorial Caption -->
-            <div class="plate-meta-content">
-              <div class="plate-header-row">
-                <span class="plate-genre-pill">Portraits & Street</span>
-                <span class="plate-aspect-stamp">1:1.5 RATIO</span>
-              </div>
-              <h3 class="plate-title">Faces & Street Life</h3>
-              <p class="plate-description">
-                Real, unposed moments, neighborhood bazaars, and the natural play of ambient dust and warm golden hour backlighting.
-              </p>
-              <div class="plate-footer-link">
-                <span class="btn-inspect-text">Open in Lightbox</span>
-                <span class="btn-inspect-arrow">→</span>
-              </div>
-            </div>
-
-          </article>
-
-          <!-- Plate 02: Road Trips & Horizons -->
-          <article class="exhibition-plate-card" data-photo-id="2" data-title="Road Trips & Horizons" data-src="assets/images/road-trip.jpg" data-exif="24mm Wide · ƒ/8.0 · 1/160s · ISO 100 · RAW" data-desc="Self-drive journeys across northern India, misty early-morning alpine climbs, and panoramic roads receding into infinity. Captured with a wide-angle focal length stopped down for edge-to-edge sharpness.">
-            
-            <!-- Analog Film Mount -->
-            <div class="plate-film-mount">
-              <div class="film-edge-top">
-                <span class="sprocket-code">▶ 102A</span>
-                <span class="film-stock-name">KODAK EKTAR RAW</span>
-                <span class="frame-index">PLATE #02</span>
-              </div>
-
-              <div class="plate-image-container">
-                <img src="assets/images/road-trip.jpg" alt="Cinematic highway stretching toward misty mountains at sunrise" class="plate-img" loading="lazy">
-                
-                <!-- Visual Hover Scrim & Inspect Badge -->
-                <div class="plate-inspect-scrim">
-                  <span class="inspect-pill">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                      <line x1="11" y1="8" x2="11" y2="14"></line>
-                      <line x1="8" y1="11" x2="14" y2="11"></line>
-                    </svg>
-                    Inspect Plate
-                  </span>
-                </div>
-              </div>
-
-              <div class="film-edge-bottom">
-                <span class="film-exif-stamp">24mm Wide · ƒ/8.0 · 1/160s · ISO 100</span>
-                <span class="film-dot">●</span>
-                <span class="film-genre">Expeditions</span>
-              </div>
-            </div>
-
-            <!-- Card Editorial Caption -->
-            <div class="plate-meta-content">
-              <div class="plate-header-row">
-                <span class="plate-genre-pill">Expeditions & Roads</span>
-                <span class="plate-aspect-stamp">1:1.5 RATIO</span>
-              </div>
-              <h3 class="plate-title">Road Trips & Horizons</h3>
-              <p class="plate-description">
-                Self-drive journeys across northern India, misty early-morning alpine climbs, and panoramic roads receding into infinity.
-              </p>
-              <div class="plate-footer-link">
-                <span class="btn-inspect-text">Open in Lightbox</span>
-                <span class="btn-inspect-arrow">→</span>
-              </div>
-            </div>
-
-          </article>
-
-          <!-- Plate 03: Nightscapes & Skies -->
-          <article class="exhibition-plate-card" data-photo-id="3" data-title="Nightscapes & Skies" data-src="assets/images/nightscape.jpg" data-exif="33mm Prime · ƒ/1.4 · 25s Long Exp · ISO 1600 · RAW" data-desc="Long-exposure shots of the night sky, total lunar eclipses, starlight reflections on still waters, and serene cityscapes after dark. Shot wide-open on a stationary mount to harvest deep celestial photons.">
-            
-            <!-- Analog Film Mount -->
-            <div class="plate-film-mount">
-              <div class="film-edge-top">
-                <span class="sprocket-code">▶ 103A</span>
-                <span class="film-stock-name">ASTRO CHROME 1600</span>
-                <span class="frame-index">PLATE #03</span>
-              </div>
-
-              <div class="plate-image-container">
-                <img src="assets/images/nightscape.jpg" alt="Starry night sky and Milky Way astrophotography over calm water" class="plate-img" loading="lazy">
-                
-                <!-- Visual Hover Scrim & Inspect Badge -->
-                <div class="plate-inspect-scrim">
-                  <span class="inspect-pill">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                      <line x1="11" y1="8" x2="11" y2="14"></line>
-                      <line x1="8" y1="11" x2="14" y2="11"></line>
-                    </svg>
-                    Inspect Plate
-                  </span>
-                </div>
-              </div>
-
-              <div class="film-edge-bottom">
-                <span class="film-exif-stamp">33mm · ƒ/1.4 · 25s Exp · ISO 1600</span>
-                <span class="film-dot">●</span>
-                <span class="film-genre">Astrophotography</span>
-              </div>
-            </div>
-
-            <!-- Card Editorial Caption -->
-            <div class="plate-meta-content">
-              <div class="plate-header-row">
-                <span class="plate-genre-pill">Astrophotography</span>
-                <span class="plate-aspect-stamp">1:1.5 RATIO</span>
-              </div>
-              <h3 class="plate-title">Nightscapes & Skies</h3>
-              <p class="plate-description">
-                Long-exposure shots of the night sky, total lunar eclipses, starlight reflections on still waters, and serene cityscapes after dark.
-              </p>
-              <div class="plate-footer-link">
-                <span class="btn-inspect-text">Open in Lightbox</span>
-                <span class="btn-inspect-arrow">→</span>
-              </div>
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 03: Tools of the Craft & Focal Length Field Manual
-         ========================================================================== -->
-    <section class="journal-section" id="gear">
-      <div class="container">
-        
-        <div class="section-editorial-header">
-          <div class="header-stamp">FIELD KIT & DARKROOM TOOLS</div>
-          <h2 class="section-editorial-title">My Everyday Gear</h2>
-          <p class="section-editorial-subtitle">
-            A focused, lightweight mirrorless kit built for spontaneous framing, unhurried observation, and darkroom grading.
-          </p>
-          <div class="header-ornament">
-            <span class="rule-line"></span>
-            <span class="rule-diamond">❖</span>
-            <span class="rule-line"></span>
-          </div>
-        </div>
-
-        <!-- Primary Camera System Archival Card -->
-        <article class="camera-system-archival-card" data-photo-id="4" data-title="Sony Alpha Mirrorless Camera & Prime Lens" data-src="assets/images/camera-gear.jpg" data-exif="APS-C Exmor Sensor · 14-bit Uncompressed RAW · 33mm Prime Lens" data-desc="My primary companion for over 15 years of RAW photography. Paired with a fast 33mm prime lens for portraits and low-light depth, backed by versatile 16–50mm and 55–210mm zoom lenses for travel.">
-          
-          <div class="camera-photo-column">
-            <div class="camera-photo-frame">
-              <img src="assets/images/camera-gear.jpg" alt="Sony Alpha mirrorless camera with 33mm prime lens on workspace" class="camera-dossier-photo" loading="lazy">
-              <div class="camera-zoom-hint">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <div class="inspect-cue">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="11" cy="11" r="8"></circle>
                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <span>Click to enlarge kit</span>
+                <span>Click to inspect</span>
               </div>
-              <span class="kit-plate-tag">PRIMARY WORKSTATION</span>
             </div>
           </div>
 
-          <div class="camera-specs-column">
-            <div class="kit-type-badge">
-              <span class="badge-dot-amber"></span>
-              <span>15+ YEARS SONY ALPHA CONTINUITY</span>
-            </div>
+        </div>
 
-            <h3 class="camera-model-heading">Sony Alpha Mirrorless System</h3>
-            
-            <p class="camera-story-text">
-              My companion for over 15 years of RAW photography. Paired with a fast <strong>33mm prime lens</strong> for portraits and low-light depth, backed by versatile <strong>16–50mm</strong> and <strong>55–210mm</strong> zoom lenses for travel and high northern passes.
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: Modern Condensed Photography Gallery (6 Real Photos)
+         ========================================================================== -->
+    <section class="section section-compact bg-alt" id="gallery">
+      <div class="container">
+        
+        <div class="section-head">
+          <div class="section-tag-row">
+            <span class="section-kicker">Visual Pursuits</span>
+            <span class="count-pill">6 Curated Plates</span>
+          </div>
+          <h2 class="section-heading">What I Capture</h2>
+          <p class="section-subtext">
+            Unposed street perspectives, illuminated nocturnal landmarks, expansive lake horizons, and northern wilderness.
+          </p>
+        </div>
+
+        <!-- Modern Condensed 6-Card Grid -->
+        <div class="gallery-grid">
+          
+          <!-- Photo 01: Siliserh Lake (Horizons) -->
+          <article class="photo-card" data-photo-id="1" data-title="Siliserh Lake Palace & Water Pavilion" data-src="photos/IMG_2630.jpg" data-exif="Alwar, Rajasthan · 55–210mm Telephoto · ƒ/8.0 · 1/250s · ISO 100" data-desc="Tranquil water reflection of Alwar's historic lake palace water platform with misty mountain ridgelines receding into the morning sky.">
+            <div class="card-media">
+              <img src="photos/IMG_2630.jpg" alt="Siliserh Lake, Alwar by Sundeep Chauhan" class="card-img" loading="lazy">
+              <span class="card-cat-pill">Horizons</span>
+              <div class="card-hover-overlay">
+                <span class="hover-btn">Inspect Plate ↗</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta-top">
+                <span class="location">Alwar, Rajasthan</span>
+                <span class="exif-stamp">55–210mm · ƒ/8.0</span>
+              </div>
+              <h3 class="card-title">Siliserh Lake Palace & Pavilion</h3>
+              <p class="card-excerpt">Tranquil water reflections and misty mountain layers framed across the calm reservoir.</p>
+            </div>
+          </article>
+
+          <!-- Photo 02: India Gate at Midnight (Nocturnal) -->
+          <article class="photo-card" data-photo-id="2" data-title="India Gate Midnight Glow" data-src="photos/IMG_3929.jpg" data-exif="New Delhi · 33mm Prime Glass · ƒ/1.8 · 1/15s · ISO 800" data-desc="Atmospheric long-exposure of the illuminated India Gate monument rising into the night sky, framed by street lamps and wet pavement reflections.">
+            <div class="card-media">
+              <img src="photos/IMG_3929.jpg" alt="India Gate at Midnight by Sundeep Chauhan" class="card-img" loading="lazy">
+              <span class="card-cat-pill cat-night">Nocturnal</span>
+              <div class="card-hover-overlay">
+                <span class="hover-btn">Inspect Plate ↗</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta-top">
+                <span class="location">New Delhi, India</span>
+                <span class="exif-stamp">33mm Prime · ƒ/1.8</span>
+              </div>
+              <h3 class="card-title">India Gate Midnight Glow</h3>
+              <p class="card-excerpt">The historic memorial bathed in amber floodlight against late-night nocturnal skies.</p>
+            </div>
+          </article>
+
+          <!-- Photo 03: Qutub Minar (Heritage Architecture) -->
+          <article class="photo-card" data-photo-id="3" data-title="Qutub Minar & Sandstone Arches" data-src="photos/IMG_3966.jpg" data-exif="Mehrauli, New Delhi · 16–50mm Wide Zoom · ƒ/7.1 · 1/320s · ISO 100" data-desc="The iconic 72.5-meter fluted sandstone minaret framed dynamically between ancient ruined 12th-century arched gateways.">
+            <div class="card-media">
+              <img src="photos/IMG_3966.jpg" alt="Qutub Minar framed by arches by Sundeep Chauhan" class="card-img" loading="lazy">
+              <span class="card-cat-pill">Heritage</span>
+              <div class="card-hover-overlay">
+                <span class="hover-btn">Inspect Plate ↗</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta-top">
+                <span class="location">Mehrauli, New Delhi</span>
+                <span class="exif-stamp">16–50mm · ƒ/7.1</span>
+              </div>
+              <h3 class="card-title">Qutub Minar & Historic Arches</h3>
+              <p class="card-excerpt">Ancient victory minaret framed by soaring 12th-century sandstone archways.</p>
+            </div>
+          </article>
+
+          <!-- Photo 04: Sambar Deer (Wildlife) -->
+          <article class="photo-card" data-photo-id="4" data-title="Sambar Antlers in Deep Forest" data-src="photos/IMG_2791.jpg" data-exif="Aravalli Sanctuary · 55–210mm Telephoto · ƒ/5.6 · 1/160s · ISO 400" data-desc="A majestic antlered Sambar stag captured resting on the forest floor, shot with telephoto compression and natural bokeh.">
+            <div class="card-media">
+              <img src="photos/IMG_2791.jpg" alt="Sambar Deer resting in forest by Sundeep Chauhan" class="card-img" loading="lazy">
+              <span class="card-cat-pill cat-wild">Wildlife</span>
+              <div class="card-hover-overlay">
+                <span class="hover-btn">Inspect Plate ↗</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta-top">
+                <span class="location">Aravalli Wilderness</span>
+                <span class="exif-stamp">55–210mm · ƒ/5.6</span>
+              </div>
+              <h3 class="card-title">Sambar Antlers in the Forest</h3>
+              <p class="card-excerpt">A majestic antlered stag framed in quiet repose amidst northern forest trails.</p>
+            </div>
+          </article>
+
+          <!-- Photo 05: Chhatarpur Temple (Architecture) -->
+          <article class="photo-card" data-photo-id="5" data-title="Shree Adya Katyayani Temple" data-src="photos/IMG_3981.jpg" data-exif="South Delhi · 16–50mm Wide Zoom · ƒ/6.3 · 1/400s · ISO 100" data-desc="Intricate sandstone carvings and sweeping spiral staircase ramps of the Chhatarpur temple complex in afternoon sunlight.">
+            <div class="card-media">
+              <img src="photos/IMG_3981.jpg" alt="Chhatarpur Temple with spiral ramps by Sundeep Chauhan" class="card-img" loading="lazy">
+              <span class="card-cat-pill">Sanctum</span>
+              <div class="card-hover-overlay">
+                <span class="hover-btn">Inspect Plate ↗</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta-top">
+                <span class="location">South Delhi, India</span>
+                <span class="exif-stamp">16–50mm · ƒ/6.3</span>
+              </div>
+              <h3 class="card-title">Chhatarpur Temple Sanctum</h3>
+              <p class="card-excerpt">Sandstone temple architecture featuring cascading spiral ramps in afternoon light.</p>
+            </div>
+          </article>
+
+          <!-- Photo 06: Aravalli Mountain Camp (Expeditions) -->
+          <article class="photo-card" data-photo-id="6" data-title="Camp Under the Aravalli Ridges" data-src="photos/IMG_2616-01.jpeg" data-exif="Northern India · 24mm Wide Perspective · ƒ/5.0 · 1/200s · ISO 100" data-desc="Rustic cane chairs and canvas tents nestled beneath the rocky, sun-baked slopes of the northern Aravalli mountain ranges.">
+            <div class="card-media">
+              <img src="photos/IMG_2616-01.jpeg" alt="Aravalli Camp tents and cane chairs by Sundeep Chauhan" class="card-img" loading="lazy">
+              <span class="card-cat-pill cat-exp">Expedition</span>
+              <div class="card-hover-overlay">
+                <span class="hover-btn">Inspect Plate ↗</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta-top">
+                <span class="location">Aravalli Foothills</span>
+                <span class="exif-stamp">24mm Wide · ƒ/5.0</span>
+              </div>
+              <h3 class="card-title">Camp Under Aravalli Ridges</h3>
+              <p class="card-excerpt">Canvas tents and traditional seating framed by the craggy slopes of northern ridges.</p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: Condensed Everyday Gear & Optical Spectrum Guide
+         ========================================================================== -->
+    <section class="section section-compact" id="gear">
+      <div class="container">
+        
+        <div class="section-head">
+          <div class="section-tag-row">
+            <span class="section-kicker">Tools of the Craft</span>
+            <span class="count-pill">Sony Alpha Kit</span>
+          </div>
+          <h2 class="section-heading">My Everyday Gear</h2>
+          <p class="section-subtext">A focused, lightweight mirrorless kit built for spontaneous framing and darkroom grading.</p>
+        </div>
+
+        <div class="gear-condensed-card" data-photo-id="7" data-title="Sony Alpha Mirrorless Camera System" data-src="assets/images/camera-gear.jpg" data-exif="APS-C Exmor Sensor · 14-bit Uncompressed RAW · 33mm Prime Lens" data-desc="Primary kit: Sony Alpha mirrorless camera with 33mm prime lens, 16–50mm wide zoom, and 55–210mm telephoto lens.">
+          
+          <div class="gear-img-wrap">
+            <img src="assets/images/camera-gear.jpg" alt="Sony Alpha mirrorless camera and 33mm lens on table" class="gear-img" loading="lazy">
+            <div class="gear-img-badge">PRIMARY CAMERA</div>
+          </div>
+
+          <div class="gear-content-wrap">
+            <div class="gear-badge-strip">
+              <span class="badge-dot"></span>
+              <span>15+ Years RAW Continuity · Sony Alpha</span>
+            </div>
+            <h3 class="gear-title">Sony Alpha Mirrorless System</h3>
+            <p class="gear-text">
+              My companion for over 15 years of RAW photography. Paired with a fast <strong>33mm prime lens</strong> for portraits and low-light depth, backed by versatile <strong>16–50mm</strong> and <strong>55–210mm</strong> zoom lenses for travel across northern highways.
             </p>
 
-            <!-- Technical Specification Table / Ledger -->
-            <div class="kit-specs-ledger">
-              <div class="ledger-row">
-                <span class="ledger-label">Sensor Architecture</span>
-                <span class="ledger-value">APS-C Exmor CMOS Sensor</span>
-              </div>
-              <div class="ledger-row">
-                <span class="ledger-label">Data Output</span>
-                <span class="ledger-value">14-bit Uncompressed RAW Format</span>
-              </div>
-              <div class="ledger-row">
-                <span class="ledger-label">Core Storytelling Glass</span>
-                <span class="ledger-value">Fast ƒ/1.4 Prime Aperture (47° FOV)</span>
-              </div>
-              <div class="ledger-row">
-                <span class="ledger-label">Handling & Tactile Control</span>
-                <span class="ledger-value">Dual Mechanical Control Dials</span>
-              </div>
+            <div class="specs-grid">
+              <div class="spec-pill"><span>Sensor</span><strong>APS-C Exmor CMOS</strong></div>
+              <div class="spec-pill"><span>Output</span><strong>14-bit Uncompressed RAW</strong></div>
+              <div class="spec-pill"><span>Core Glass</span><strong>33mm ƒ/1.4 (47° FOV)</strong></div>
+              <div class="spec-pill"><span>Companion</span><strong>Pixel 11 (Scouting)</strong></div>
             </div>
           </div>
 
-        </article>
+        </div>
 
-        <!-- INFOGRAPHIC: Analog Optical Spectrum & Focal Ruler -->
-        <div class="optical-spectrum-card">
-          <div class="spectrum-intro">
-            <span class="spectrum-badge">CALIBRATED FIELD MANUAL</span>
+        <!-- Optical Spectrum Infographic -->
+        <div class="spectrum-box">
+          <div class="spectrum-header">
+            <span class="spectrum-tag">OPTICAL SPECTRUM</span>
             <h3 class="spectrum-title">Focal Length Spectrum & Lens Coverage</h3>
             <p class="spectrum-desc">How three focal length bands cover every story from panoramic horizon to distant mountain ridgeline:</p>
           </div>
 
-          <!-- Analog Optical Scale Ruler Bar -->
-          <div class="optical-ruler-wrapper">
-            <div class="ruler-ticks-bar" aria-hidden="true">
-              <span>| 16mm</span>
-              <span>| 24mm</span>
-              <span class="tick-prime">✦ 33mm PRIME CORE</span>
-              <span>| 50mm</span>
-              <span>| 85mm</span>
-              <span>| 210mm</span>
+          <div class="spectrum-gauge">
+            <div class="gauge-seg seg-wide">
+              <span class="gauge-mm">16 – 24mm</span>
+              <span class="gauge-name">Wide Vistas</span>
+              <span class="gauge-fov">83° – 60° FOV</span>
             </div>
-
-            <div class="optical-spectrum-segments">
-              <div class="spectrum-seg seg-wide" style="flex: 1.2;">
-                <span class="seg-range">16 – 24mm</span>
-                <span class="seg-title">Wide Vistas</span>
-                <span class="seg-fov">83° – 60° FOV</span>
-              </div>
-              <div class="spectrum-seg seg-prime-sweetspot" style="flex: 1.8;">
-                <div class="sweetspot-ribbon">Core Sweet Spot</div>
-                <span class="seg-range">33mm Prime Lens</span>
-                <span class="seg-title">~50mm Eq. Human Eye</span>
-                <span class="seg-fov">47° FOV · Creamy Bokeh</span>
-              </div>
-              <div class="spectrum-seg seg-mid" style="flex: 1.0;">
-                <span class="seg-range">50 – 85mm</span>
-                <span class="seg-title">Portraits</span>
-                <span class="seg-fov">32° – 19° FOV</span>
-              </div>
-              <div class="spectrum-seg seg-tele" style="flex: 1.5;">
-                <span class="seg-range">85 – 210mm</span>
-                <span class="seg-title">Telephoto Reach</span>
-                <span class="seg-fov">29° – 7.8° FOV</span>
-              </div>
+            <div class="gauge-seg seg-prime-core">
+              <div class="core-ribbon">Core Sweet Spot</div>
+              <span class="gauge-mm">33mm Prime Lens</span>
+              <span class="gauge-name">~50mm Eq. Human Eye</span>
+              <span class="gauge-fov">47° FOV · Creamy Bokeh</span>
+            </div>
+            <div class="gauge-seg seg-tele">
+              <span class="gauge-mm">55 – 210mm</span>
+              <span class="gauge-name">Telephoto Reach</span>
+              <span class="gauge-fov">29° – 7.8° FOV</span>
             </div>
           </div>
 
-          <!-- Detailed 3-Lens Field Cards -->
-          <div class="optical-cards-triad">
-            
-            <div class="optical-lens-card">
-              <div class="lens-card-header">
-                <span class="lens-accent-dot dot-wide"></span>
-                <span class="lens-tag">VISTA & HIGHWAY</span>
-              </div>
-              <h4 class="lens-name">16–50mm Wide Zoom</h4>
-              <p class="lens-details">
-                Architecture, sweeping Northern Indian road trips, deep mountain valleys, and dynamic cloud formations stretching toward the horizon.
-              </p>
-              <div class="lens-footer-spec">83° – 32° FOV · Lightweight</div>
+          <div class="lens-trio">
+            <div class="lens-tile">
+              <div class="lens-top"><span class="dot dot-wide"></span><strong>16–50mm Wide Zoom</strong></div>
+              <p>Architecture, wide mountain valleys, and dynamic cloud formations across northern roads.</p>
             </div>
-
-            <div class="optical-lens-card card-featured-prime">
-              <div class="lens-card-header">
-                <span class="lens-accent-dot dot-prime"></span>
-                <span class="lens-tag prime-tag">PRIMARY COMPOSER</span>
-              </div>
-              <h4 class="lens-name">33mm ƒ/1.4 Prime (Core)</h4>
-              <p class="lens-details">
-                Natural perspective matching true human vision. Razor-sharp subject isolation, low-light night sensitivity, and documentary street portraits.
-              </p>
-              <div class="lens-footer-spec prime-spec">47° Human FOV · Fast Glass</div>
+            <div class="lens-tile tile-prime">
+              <div class="lens-top"><span class="dot dot-prime"></span><strong>33mm ƒ/1.4 Prime (Core)</strong></div>
+              <p>Natural perspective matching human vision. Low-light sensitivity and documentary portraits.</p>
             </div>
-
-            <div class="optical-lens-card">
-              <div class="lens-card-header">
-                <span class="lens-accent-dot dot-tele"></span>
-                <span class="lens-tag">COMPRESSION & DISTANCE</span>
-              </div>
-              <h4 class="lens-name">55–210mm Telephoto</h4>
-              <p class="lens-details">
-                Visual compression of distant alpine layers, total lunar eclipse framing, and isolated ridgeline details far across the valley.
-              </p>
-              <div class="lens-footer-spec">29° – 7.8° FOV · Far Reach</div>
+            <div class="lens-tile">
+              <div class="lens-top"><span class="dot dot-tele"></span><strong>55–210mm Telephoto</strong></div>
+              <p>Visual compression of distant ridgelines, wildlife details, and total lunar eclipse framing.</p>
             </div>
-
-          </div>
-        </div>
-
-        <!-- Secondary Scouting Companion Strip -->
-        <div class="companion-scout-card">
-          <div class="scout-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-              <line x1="12" y1="18" x2="12.01" y2="18"></line>
-            </svg>
-          </div>
-          <div class="scout-content">
-            <strong>Google Pixel 11 • Everyday Scouting Companion</strong>
-            <p>
-              Always in pocket for rapid composition testing, location scouting, and spontaneous HDR bracket previews on northern road trips before breaking out the mirrorless kit.
-            </p>
           </div>
         </div>
 
@@ -594,309 +414,195 @@
     </section>
 
     <!-- ==========================================================================
-         SECTION 04: Operations & Systems by Night (The Nocturnal Ledger)
+         SECTION: Nocturnal Operations & Duality
          ========================================================================== -->
-    <section class="journal-section section-alt" id="operations">
+    <section class="section section-compact bg-alt" id="operations">
       <div class="container">
         
-        <div class="section-editorial-header">
-          <div class="header-stamp">NOCTURNAL DISCIPLINE & LEADERSHIP</div>
-          <h2 class="section-editorial-title">Operations & Systems by Night</h2>
-          <p class="section-editorial-subtitle">
-            When I’m not holding a camera, I manage large-scale technical operations during overnight shifts. With over 15 years in customer support and service delivery:
-          </p>
-          <div class="header-ornament">
-            <span class="rule-line"></span>
-            <span class="rule-diamond">❖</span>
-            <span class="rule-line"></span>
+        <div class="section-head">
+          <div class="section-tag-row">
+            <span class="section-kicker">Professional Discipline</span>
+            <span class="count-pill">15+ Years Leadership</span>
           </div>
+          <h2 class="section-heading">Operations & Systems by Night</h2>
+          <p class="section-subtext">
+            When I’m not holding a camera, I manage large-scale technical operations during overnight shifts with over 15 years in customer support and service delivery.
+          </p>
         </div>
 
-        <!-- Nocturnal Operational Command Metrics Grid -->
-        <div class="ops-ledger-grid">
+        <!-- 4-Metric Grid -->
+        <div class="metrics-grid">
           
-          <!-- Metric 01: -20% Repeat Escalations -->
-          <div class="ledger-metric-tile">
-            <div class="tile-top-row">
-              <span class="metric-status-tag tag-reduction">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg>
-                Reduction
-              </span>
-              <!-- Sparkline SVG -->
-              <svg class="sparkline-analog" viewBox="0 0 100 28" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M0,6 Q30,10 60,18 T100,24" fill="none" stroke="#d49b5c" stroke-width="2.2" stroke-linecap="round"></path>
+          <div class="metric-card">
+            <div class="metric-head">
+              <span class="metric-tag tag-blue">−20% Escalations</span>
+              <svg class="sparkline" viewBox="0 0 100 26" preserveAspectRatio="none">
+                <path d="M0,6 Q30,10 60,18 T100,24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"></path>
               </svg>
             </div>
-            <div class="tile-number-big">−20%</div>
-            <h3 class="tile-title">Repeat Escalations</h3>
-            <p class="tile-text">
-              Eliminated recurring failure modes through systematic root-cause diagnosis, cross-team feedback, and robust SOP patches.
-            </p>
+            <div class="metric-val">−20%</div>
+            <h3 class="metric-name">Repeat Escalations</h3>
+            <p class="metric-info">Eliminated recurring failure modes through root-cause diagnosis and robust SOP patches.</p>
           </div>
 
-          <!-- Metric 02: +15% Output -->
-          <div class="ledger-metric-tile">
-            <div class="tile-top-row">
-              <span class="metric-status-tag tag-efficiency">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-                Throughput
-              </span>
-              <!-- Sparkline SVG -->
-              <svg class="sparkline-analog" viewBox="0 0 100 28" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M0,24 Q30,20 60,10 T100,6" fill="none" stroke="#68bb76" stroke-width="2.2" stroke-linecap="round"></path>
+          <div class="metric-card">
+            <div class="metric-head">
+              <span class="metric-tag tag-green">+15% Output</span>
+              <svg class="sparkline" viewBox="0 0 100 26" preserveAspectRatio="none">
+                <path d="M0,24 Q30,20 60,10 T100,6" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"></path>
               </svg>
             </div>
-            <div class="tile-number-big">+15%</div>
-            <h3 class="tile-title">Team Throughput</h3>
-            <p class="tile-text">
-              Optimized overnight queue handovers, streamlined triage protocols, and eliminated resolution latency during peak cycles.
-            </p>
+            <div class="metric-val">+15%</div>
+            <h3 class="metric-name">Team Throughput</h3>
+            <p class="metric-info">Optimized overnight queue handovers, streamlined triage, and reduced latency.</p>
           </div>
 
-          <!-- Metric 03: 99.8% Queue SLA -->
-          <div class="ledger-metric-tile">
-            <div class="tile-top-row">
-              <span class="metric-status-tag tag-uptime">
-                <span class="pulse-indicator"></span>
-                24/7 Global Live
-              </span>
-              <!-- Circular SLA gauge -->
-              <svg class="gauge-analog" width="28" height="28" viewBox="0 0 36 36" aria-hidden="true">
-                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(212, 155, 92, 0.2)" stroke-width="3.5"/>
-                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831" fill="none" stroke="#d49b5c" stroke-width="3.5" stroke-dasharray="99.8, 100"/>
+          <div class="metric-card">
+            <div class="metric-head">
+              <span class="metric-tag tag-amber">99.8% SLA</span>
+              <svg class="gauge-icon" width="26" height="26" viewBox="0 0 36 36">
+                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(245, 158, 11, 0.2)" stroke-width="3.5"/>
+                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831" fill="none" stroke="#f59e0b" stroke-width="3.5" stroke-dasharray="99.8, 100"/>
               </svg>
             </div>
-            <div class="tile-number-big">99.8%</div>
-            <h3 class="tile-title">Queue SLA Adherence</h3>
-            <p class="tile-text">
-              Stabilizing mission-critical overnight queue delivery across transatlantic timezones with unyielding operational discipline.
-            </p>
+            <div class="metric-val">99.8%</div>
+            <h3 class="metric-name">Queue SLA Adherence</h3>
+            <p class="metric-info">Stabilizing mission-critical overnight queues through peak international timezones.</p>
           </div>
 
-          <!-- Metric 04: AI QA Integration -->
-          <div class="ledger-metric-tile">
-            <div class="tile-top-row">
-              <span class="metric-status-tag tag-ai">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                AI Assisted
-              </span>
-              <!-- Audio waveform sparkline -->
-              <svg class="sparkline-analog" viewBox="0 0 100 28" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M0,14 L15,14 L25,4 L35,24 L45,8 L55,20 L65,6 L75,22 L85,14 L100,14" fill="none" stroke="#c48df0" stroke-width="2" stroke-linecap="round"></path>
+          <div class="metric-card">
+            <div class="metric-head">
+              <span class="metric-tag tag-purple">AI QA Audits</span>
+              <svg class="sparkline" viewBox="0 0 100 26" preserveAspectRatio="none">
+                <path d="M0,13 L15,13 L25,4 L35,22 L45,8 L55,19 L65,5 L75,21 L85,13 L100,13" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round"></path>
               </svg>
             </div>
-            <div class="tile-number-big">AI QA</div>
-            <h3 class="tile-title">Automated Auditing</h3>
-            <p class="tile-text">
-              Pioneered speech-to-text workflows and NLP models for automated quality audits, agent feedback, and CSAT enhancement.
-            </p>
+            <div class="metric-val">AI QA</div>
+            <h3 class="metric-name">Automated Auditing</h3>
+            <p class="metric-info">Speech-to-text workflows and NLP models for automated quality audits and CSAT enhancement.</p>
           </div>
 
         </div>
 
-        <!-- INFOGRAPHIC: Operational Duality Spread -->
-        <div class="operational-duality-spread">
-          <div class="duality-banner">
-            <span class="duality-seal">OPERATIONAL DUALITY</span>
-            <h3 class="duality-headline">Two Disciplines, One Mindset</h3>
+        <!-- Duality Spread -->
+        <div class="duality-card">
+          <div class="duality-top">
+            <span class="duality-pill">OPERATIONAL DUALITY</span>
+            <h3 class="duality-title">Two Disciplines, One Mindset</h3>
           </div>
 
-          <div class="duality-columns-wrapper">
-            
-            <!-- Side 1: Behind the Shutter -->
-            <div class="duality-column-side">
-              <div class="side-icon-pill icon-dawn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="5"></circle>
-                  <line x1="12" y1="1" x2="12" y2="3"></line>
-                  <line x1="12" y1="21" x2="12" y2="23"></line>
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                  <line x1="1" y1="12" x2="3" y2="12"></line>
-                  <line x1="21" y1="12" x2="23" y2="12"></line>
-                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-                <span>Behind the Shutter (Dawn)</span>
+          <div class="duality-row">
+            <div class="duality-side">
+              <div class="duality-side-title">
+                <span class="side-dot amber"></span>
+                <strong>Behind the Shutter (Dawn)</strong>
               </div>
-              <ul class="duality-bullet-list">
-                <li><span class="bullet-gem">✦</span> Waiting patiently for the exact golden light before sunrise at 5 AM</li>
-                <li><span class="bullet-gem">✦</span> Framing genuine human expressions without staged interference</li>
-                <li><span class="bullet-gem">✦</span> Precision darkroom balancing of deep shadow tones and delicate highlights</li>
+              <ul class="duality-list">
+                <li>Waiting patiently for the exact light before sunrise at 5 AM</li>
+                <li>Framing raw human expressions and architectural symmetries without interference</li>
+                <li>Precision darkroom balancing of deep shadow tones and delicate highlights</li>
               </ul>
             </div>
 
-            <!-- Equilibrium Divider -->
-            <div class="duality-mid-anchor">
-              <div class="equilibrium-circle">
-                <span>=</span>
-              </div>
-            </div>
+            <div class="duality-eq">=</div>
 
-            <!-- Side 2: Operations Floor -->
-            <div class="duality-column-side">
-              <div class="side-icon-pill icon-night">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <span>On the Operations Floor (Overnight)</span>
+            <div class="duality-side">
+              <div class="duality-side-title">
+                <span class="side-dot blue"></span>
+                <strong>On the Operations Floor (Overnight)</strong>
               </div>
-              <ul class="duality-bullet-list">
-                <li><span class="bullet-gem">✦</span> Keeping unshakeable calm when live telemetry spikes unpredictably at 3 AM</li>
-                <li><span class="bullet-gem">✦</span> Pinpointing real root causes with surgical clarity without panic or haste</li>
-                <li><span class="bullet-gem">✦</span> Refining complex multi-region queues into clean, repeatable standard SOPs</li>
+              <ul class="duality-list">
+                <li>Keeping steady when live telemetry spikes unpredictably at 3 AM</li>
+                <li>Pinpointing real root causes with surgical clarity without panic or haste</li>
+                <li>Refining complex global queues into clean, reliable SOPs</li>
               </ul>
             </div>
-
           </div>
         </div>
 
-        <!-- Editorial Pull Quote Block -->
-        <div class="analog-quote-card">
-          <div class="quote-watermark" aria-hidden="true">“</div>
-          <blockquote class="quote-editorial-passage">
-            Whether I’m waiting for the right light before sunrise or keeping an operations floor steady at 3 AM, it comes down to the same habit: staying patient, noticing the small details, and keeping things simple.
+        <!-- Pull Quote -->
+        <div class="quote-box">
+          <blockquote class="quote-text">
+            “Whether I’m waiting for the right light before sunrise or keeping an operations floor steady at 3 AM, it comes down to the same habit: staying patient, noticing the small details, and keeping things simple.”
           </blockquote>
-          <div class="quote-citation-row">
-            <span class="citation-rule"></span>
-            <span class="citation-author">Sundeep · Personal Philosophy</span>
-          </div>
+          <div class="quote-author">— Sundeep · Personal Philosophy</div>
         </div>
 
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         CLOSING SECTION: Archival Colophon
-         ========================================================================== -->
-    <section class="journal-section section-colophon">
-      <div class="container">
-        <div class="colophon-card">
-          <span class="colophon-seal">✦ THE CANVAS CONTINUES ✦</span>
-          <h2 class="colophon-heading">Explore the Canvas</h2>
-          <p class="colophon-text">
-            Take a look around the articles, browse through the pictures, and check out the videos. Each shutter click is a preserved second in an unrepeatable journey.
-          </p>
-          <div class="colophon-cta-row">
-            <a href="#capture" class="colophon-btn btn-primary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                <polyline points="21 15 16 10 5 21"></polyline>
-              </svg>
-              <span>View Photographic Plates</span>
-            </a>
-            <a href="https://github.com/sandys101/Sandys101.github.io" target="_blank" rel="noopener noreferrer" class="colophon-btn btn-secondary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
-              <span>Inspect Source on GitHub</span>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
 
   </main>
 
   <!-- ==========================================================================
-       PHOTO LIGHTBOX MODAL (Interactive Plate Inspector)
+       PHOTO LIGHTBOX MODAL (Full-Screen Image Inspector)
        ========================================================================== -->
-  <div class="photo-lightbox-modal" id="photo-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
-    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+  <div class="lightbox-modal" id="photo-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="lightbox-overlay" id="lightbox-backdrop"></div>
     
-    <div class="lightbox-stage">
+    <div class="lightbox-container">
       
       <!-- Top Action Bar -->
-      <div class="lightbox-top-bar">
-        <div class="lightbox-counter-stamp" id="lightbox-counter">PLATE 01 / 04</div>
-        <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close Lightbox (Esc)">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="lightbox-bar">
+        <div class="lightbox-tag" id="lightbox-counter">PLATE 01 / 06</div>
+        <button class="btn-close" id="lightbox-close" aria-label="Close Lightbox (Esc)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
-          <span class="close-text">ESC</span>
+          <span>ESC</span>
         </button>
       </div>
 
-      <!-- Main Display -->
-      <div class="lightbox-content-box">
-        
-        <!-- Navigation Prev -->
-        <button class="lightbox-nav-arrow arrow-prev" id="lightbox-prev" aria-label="Previous photograph">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Stage & Arrows -->
+      <div class="lightbox-stage">
+        <button class="nav-arrow prev" id="lightbox-prev" aria-label="Previous photograph">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="15 18 9 12 15 6"></polyline>
           </svg>
         </button>
 
-        <!-- Image Frame -->
-        <div class="lightbox-image-mount">
-          <img src="" alt="" class="lightbox-image" id="lightbox-img">
+        <div class="lightbox-media-frame">
+          <img src="" alt="" class="lightbox-active-img" id="lightbox-img">
         </div>
 
-        <!-- Navigation Next -->
-        <button class="lightbox-nav-arrow arrow-next" id="lightbox-next" aria-label="Next photograph">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button class="nav-arrow next" id="lightbox-next" aria-label="Next photograph">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </button>
-
       </div>
 
-      <!-- Bottom Telemetry & Caption Bar -->
-      <div class="lightbox-info-drawer">
-        <div class="lightbox-info-top">
-          <h3 class="lightbox-title" id="lightbox-title">Faces & Street Life</h3>
-          <div class="lightbox-exif-pill" id="lightbox-exif">33mm · ƒ/1.4 · 1/320s · ISO 100 · RAW</div>
+      <!-- Metadata Drawer -->
+      <div class="lightbox-meta">
+        <div class="meta-top-row">
+          <h3 class="meta-title" id="lightbox-title">Photo Title</h3>
+          <span class="meta-exif-pill" id="lightbox-exif">EXIF Metadata</span>
         </div>
-        <p class="lightbox-desc" id="lightbox-desc">
-          Real, unposed moments, neighborhood bazaars, and natural play of ambient dust and warm golden hour backlighting.
-        </p>
+        <p class="meta-desc" id="lightbox-desc">Detailed photo narrative.</p>
       </div>
 
     </div>
   </div>
 
-  <!-- ==========================================================================
-       EDITORIAL FOOTER & ARCHIVAL COLOPHON
-       ========================================================================== -->
-  <footer class="journal-footer">
-    <div class="container footer-content-wrap">
-      
-      <div class="footer-col-left">
-        <div class="footer-brand-lockup">
-          <span class="footer-monogram">❖</span>
-          <span class="footer-brand-name">SANDYS101.IN</span>
-        </div>
-        <p class="footer-colophon-note">
-          Gurugram, Northern India • A Personal Viewpoint • Living by My Own Design.
-        </p>
-        <p class="footer-copyright">
-          &copy; 2026 SANDYS101.IN. Curated in the darkroom with pure HTML, CSS & JavaScript.
-        </p>
+  <!-- Modern Condensed Footer -->
+  <footer class="footer">
+    <div class="container footer-row">
+      <div class="footer-left">
+        <strong>SANDYS101.IN</strong> • Gurugram, India • Living by My Own Design
       </div>
-
-      <div class="footer-col-right">
-        <div class="footer-nav-links">
-          <a href="#intro">Manifesto</a>
-          <a href="#capture">Visual Plates</a>
-          <a href="#gear">Gear & Spectrum</a>
-          <a href="#operations">Operations</a>
-        </div>
-        
-        <a href="https://github.com/sandys101/Sandys101.github.io" target="_blank" rel="noopener noreferrer" class="footer-github-badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="footer-right">
+        <a href="https://github.com/sandys101/Sandys101.github.io" target="_blank" rel="noopener noreferrer" class="footer-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
           </svg>
-          <span>Repository Source</span>
-          <span class="arrow-up-right">↗</span>
+          <span>Source Code</span>
+          <span>↗</span>
         </a>
+        <span class="copyright">&copy; 2026 SANDYS101.IN</span>
       </div>
-
     </div>
   </footer>
 
-  <!-- Main JavaScript File -->
   <script src="script.js"></script>
 </body>
 </html>
